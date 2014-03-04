@@ -1,5 +1,7 @@
 Podfeedmaker::Application.routes.draw do
-  root "feed#index", as: "index", defaults: { format: "xml" }
+  root "feed#index", defaults: { format: "xml" }
+
+  get 'feed' => 'feed#index', defaults: { format: "xml" }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
