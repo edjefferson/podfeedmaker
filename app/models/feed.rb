@@ -7,7 +7,7 @@ class Feed < ActiveRecord::Base
 
     links = raw_links.map { |link| link.attributes['href'].value}
 
-    links.select { |link| link.include? "mp3"}
+    links.select { |link| link.include? "mp3"}.reverse
 
   end
 end
