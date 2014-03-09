@@ -8,25 +8,27 @@
     <link>http://www.somefoolnotion.com</link>
     <language>en-us</language>
     <copyright>Copyright 2007</copyright>
-    <lastBuildDate>Sun,git 02 Mar 2013 11:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Mar 2013 11:30:00 +0000</lastBuildDate>
     <pubDate>Sun, 02 Mar 2013 11:30:00 +0000</pubDate>
     <docs>http://www.somefoolnotion.com</docs>
     <webMaster>e.jefferson@gmail.com</webMaster>
 
   
-
+<% @links.each do |link| %>
   
 
 
 <item>
-<title>SLCVS1D2C</title>
+<title><%= link.gsub(".mp3","") %></title>
 <link></link>
-<guid>http://somefoolnotion.com/private/slcvs1d2c.mp3</guid>
+<guid>http://somefoolnotion.com/private/<%= link %></guid>
 <description></description>
-<enclosure url="http://somefoolnotion.com/private/slcvs1d2c.mp3" type="audio/mpeg"/>
+<enclosure url="http://somefoolnotion.com/private/<%= link %>" type="audio/mpeg"/>
 <category>Podcasts</category>
 <pubDate>http://www.somefoolnotion.com</pubDate>
 </item>
+
+<% end %>
 
 
 </channel>

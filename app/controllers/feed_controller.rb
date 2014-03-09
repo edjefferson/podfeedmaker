@@ -1,6 +1,6 @@
 class FeedController < ApplicationController
 
   def index
-    respond_to :xml
+    @links = Feed.get_links
   end
 end
